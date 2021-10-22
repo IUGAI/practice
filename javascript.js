@@ -46,7 +46,7 @@ var appData = {
   },
   choseincome: function(){
       var items = prompt('что принесет дополнительный доход? (перечислите через заптую)','');
-      if ((typeof(items) != 'string' || items == null)){
+      if ((typeof(items) != 'string' || items == "" || items == null)){
           alert("error");
       } else {
       appData.income = items.split(', ');
@@ -57,7 +57,7 @@ var appData = {
           alert("Способы дополнитьного заработка" + "способ " + (i+1)  + ": " + items);
       });
       for (var key in appData){
-          alert(key);
+          alert("Наша программа включает в себя данные: " + key + " - " + appData[key]);
       }
   }
 
